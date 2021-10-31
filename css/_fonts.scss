@@ -1,0 +1,52 @@
+// Font Vairables
+$heading-font: "Damion-Regular";
+$body-font: "JosefinSans-Regular";
+$secondary-font: "FugazOne-Regular";
+/* Fonts */
+@font-face {
+  font-family: "Damion-Regular";
+  src: url("../fonts/Damion-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "JosefinSans-Regular";
+  src: url("../fonts/JosefinSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FugazOne-Regular";
+  src: url("../fonts/FugazOne-Regular.ttf") format("truetype");
+}
+// Font Styles
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-family: $heading-font;
+
+  @include media-md {
+    font-size: 4rem;
+  }
+}
+h2 {
+  font-size: 3rem;
+
+  @include media-lg {
+    font-size: 2.5rem;
+  }
+}
+h3 {
+  font-size: 1.5rem;
+}
+h2,
+h3,
+h4 {
+  font-weight: 500;
+  font-family: $heading-font;
+}
+p {
+  font-size: 1.2rem;
+}
+body {
+  font-family: $body-font;
+}
+.body-font {
+  font-family: $secondary-font;
+}

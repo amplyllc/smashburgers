@@ -1,0 +1,129 @@
+header {
+    width: 100%;
+    z-index: 99;
+
+    a {
+        color: black;
+    }
+
+    ul {
+        list-style: none;
+        overflow: hidden;
+
+        a {
+            display: block;
+            font-size: 1.2rem;
+            padding: 1rem 0;
+
+            @include media-md {
+                font-size: 1rem;
+                padding: 2rem 1rem
+            }
+        }
+        a:hover {
+            color: $secondary-color;
+            @include transition-ease
+        }
+    }
+
+    li {
+        margin: 1rem;
+
+        @include media-md {
+            margin: .6rem 0;
+            float: left;
+        }
+    }
+
+    .item {
+        @include media-md {
+            margin-right: 1rem;
+        }
+    }
+
+    .button-3 {
+        @include media-md {
+            margin-right: 1rem;
+        }
+    }
+
+    .logo {
+        font-family: "PoppinsExtraBold";
+        display: block;
+        float: left;
+        padding: 1rem 1rem;
+    }
+
+    .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+
+        @include media-md {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+    }
+
+    .menuIcon {
+        cursor: pointer;
+        float: right;
+        padding: 3rem 1rem;
+        position: relative;
+        user-select: none;
+
+        .navIcon {
+            display: block;
+            width: 18px;
+            height: 2px;
+            position: relative;
+            background: black;
+            transition: background .2s ease-out;
+        }
+        .navIcon:before,
+        .navIcon:after {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: black;
+            content: '';
+            transition: all .2s ease-out;
+        }
+        .navIcon:before {
+            top: 5px;
+        }
+        .navIcon:after {
+            top: -5px;
+        }
+    }
+
+    .menuBtn {
+        display: none;
+    }
+
+    .menuBtn:checked ~ .menu {
+        max-height: 400px;
+        
+        @include media-smb {
+            padding: 1rem 0;
+            @include transition-ease
+        }
+    }
+
+    .menuBtn:checked ~ .menuIcon .navIcon {
+        background-color: transparent;
+    }
+
+    .menuBtn:checked ~ .menuIcon .navIcon:before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .menuBtn:checked ~ .menuIcon .navIcon:after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+}

@@ -1,0 +1,73 @@
+// Headers
+
+// <header class="d-flex j-c-c a-i-c px-2 bg-white">
+//     <a class="hide md-show me-1" href="#">Events</a>
+//     <a class="hide md-show me-1" href="#">About Us</a>
+//     <a class="hide md-show me-2" href="#">Contact</a>
+//     <img class="w-30 smb-me-auto" src="svg/logo.svg" alt="logo">
+//     <a class="hide md-show ms-2 me-1" href="#">Directions</a>
+//     <a class="hide md-show me-1" href="#">Jobs</a>
+//     <a href="#">Menu</a>
+//     <a class="d-flex a-i-c md-hide ms-2" href="#">
+//         <svg width="20" height="20" viewBox="0 0 58 43" fill="none">
+//             <rect width="58" height="9" rx="4.5" fill="black"/>
+//             <rect y="17" width="58" height="9" rx="4.5" fill="black"/>
+//             <rect y="34" width="58" height="9" rx="4.5" fill="black"/>
+//         </svg>
+//     </a>
+// </header>
+
+// Buttons
+
+.button-1 {
+  color: $secondary-color;
+  border: 3px solid $secondary-color;
+  border-radius: 50px;
+}
+.button-2 {
+  color: $text-color;
+  background-color: $secondary-color;
+  border: 3px solid $secondary-color;
+  border-radius: 50px;
+}
+.button-1:hover {
+  color: $text-color;
+  background: $secondary-color;
+
+  @include transition-ease;
+}
+.button-2:hover {
+  color: $secondary-color;
+  background: none;
+  border: 3px solid $secondary-color;
+
+  @include transition-ease;
+}
+
+// Contact Form
+
+// <section id="contact" class="d-flex flex-column j-c-c a-i-c my-5">
+//     <h2 class="mb-2 px-1">Contact</h2>
+//     <form action="contactform.php" method="POST">
+//         <div class="d-flex">
+//             <input class="me-1" type="text" name="name" class="form-control" placeholder="Your name" aria-label="Full name" required>
+//             <input type="email" class="form-control" name="email" placeholder="Your email" required>
+//         </div>
+//         <div class="d-flex">
+//             <input class="w-100 mt-1" type="subject" class="form-control" name="subject" placeholder="Subject of message" required>
+//         </div>
+//         <div class="d-flex">
+//             <textarea class="form-control mt-1 w-100" name="message" rows="3" placeholder="Your message" required></textarea>
+//         </div>
+//     </form>
+// </section>
+
+input,
+textarea {
+  background-color: #fbf1e1;
+  color: #867e6e;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  resize: vertical;
+}

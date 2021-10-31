@@ -1,0 +1,48 @@
+@import "config";
+@import "fonts";
+
+// General Styles
+img {
+  width: 100%;
+}
+a {
+  color: black;
+}
+header {
+  img {
+    width: 110px;
+
+    @include media-md {
+      width: 130px;
+    }
+  }
+}
+
+// Classes
+.grow:hover {
+  transform: scale(1.03);
+}
+.vh100 {
+  height: 100vh;
+}
+.line {
+  width: 20px;
+  height: 2px;
+  background-color: $secondary-color;
+  border: none;
+}
+.two {
+  margin-top: 1px;
+}
+.checkerDown {
+  margin-bottom: -7px;
+}
+.checkerUp {
+  margin-top: -5px;
+}
+
+@import "nav";
+@import "landing";
+@import "about";
+@import "components";
+@import "oatcake";
